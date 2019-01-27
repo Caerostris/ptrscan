@@ -1,0 +1,13 @@
+[package]
+name = "ptrscan"
+version = "0.1.0"
+authors = ["Keno Schwalb <caerostris@gmail.com>"]
+
+[dependencies]
+trust-dns-resolver = "0.10.2"
+clap = "2.32.0"
+ipnet = "2.0.0"
+tokio = "0.1.15"
+futures = "0.1.17"
+pbr = "1.0.1"
+failure = "0.1.5"
