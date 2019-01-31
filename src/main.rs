@@ -21,13 +21,12 @@ use pbr::ProgressBar;
 fn _main() -> Result<()> {
     let matches = clap_app!(ptrscan =>
         (version: "0.1")
-        (author: "Caerostris <caerostris@gmail.com>")
-        (about: "Retrieves all PTR records of an IPv4 address range")
+        (about: "Retrieves all PTR records of an IPv4 subnet")
         (@arg cidr: --cidr +required +takes_value
-            "IP network to scan for PTR records")
+            "IP network to scan in CIDR notation")
         (@arg output_file: -o --output +required +takes_value "Output file")
         (@arg resolvers: -r --resolvers +takes_value
-            "Comma-separated list of DNS resolvers (default: Google resolvers")
+            "Comma-separated list of DNS resolvers\nDefault: Google DNS servers")
     ).get_matches();
 
     // TODO: allow user to pass a starting and ending IP instead of CIDR
